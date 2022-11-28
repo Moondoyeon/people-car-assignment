@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import Button from '../../components/UI/Button/Button';
+
 import TagSmall from '../../components/UI/Tag/TagSmall';
 import { ICarBasic } from '../../types/car';
 import isWithinADay from '../../utils/isWithinADay';
@@ -32,7 +32,7 @@ function CarListItem({ car }: Props) {
       </InfoWrapper>
       <ImgWrapper>
         <img alt="car" src={car.attribute.imageUrl} />
-        {/* {isWithinADay(car.createdAt) && <Button text="신규" color="blue" size="small" />} */}
+
         {isWithinADay(car.createdAt) && <TagSmall text="신규" customStyle={TagSmallStyle} />}
       </ImgWrapper>
     </Container>
