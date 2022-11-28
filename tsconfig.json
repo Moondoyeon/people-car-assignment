@@ -18,5 +18,5 @@
     "jsx": "react-jsx", // jsx 지원
     "sourceMap": true // 디버깅시 원본 TypeScript 코드를 보여줌
   },
-  "include": ["client", "src"]
+  "include": ["src"]
 }

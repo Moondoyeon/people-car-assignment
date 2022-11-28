@@ -1,5 +1,6 @@
 import React from 'react';
 import Bar from '../../components/UI/Bar/Bar';
+
 type dataKeyValue = {
   subTitle: string;
   key: string;

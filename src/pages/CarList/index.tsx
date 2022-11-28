@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import styled from 'styled-components';
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -19,7 +18,7 @@ function CarList() {
   const segment = useMemo(() => getCarSegment(searchParams), [searchParams]);
 
   useEffect(() => {
-    getCarList({ segment: segment });
+    getCarList({ segment });
   }, [segment]);
 
   return (

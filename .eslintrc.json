@@ -1,4 +1,5 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es6": true,
@@ -10,9 +11,10 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "extends": ["plugin:import/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": ["airbnb", "plugin:import/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
     "comma-dangle": "off", // trailing comma 생략 가능
     "consistent-return": "off", // 함수에 return문 생략 가능
