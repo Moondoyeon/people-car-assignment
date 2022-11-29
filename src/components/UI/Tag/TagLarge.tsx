@@ -7,7 +7,7 @@ type TagLargeProps = {
   onClick: () => void;
   customStyle: FlattenInterpolation<ThemeProps<unknown>>;
 };
-function Tag({ text, isActive = false, customStyle, onClick }: TagLargeProps) {
+function TagLarge({ text, isActive = false, customStyle, onClick }: TagLargeProps) {
   return <TagRaw text={text} customStyle={TagLargeStyle(isActive, customStyle)} onClick={onClick} />;
 }
 const TagLargeStyle = (isActive: boolean, customStyle: FlattenInterpolation<ThemeProps<unknown>> | undefined) => css`
@@ -20,4 +20,4 @@ const TagLargeStyle = (isActive: boolean, customStyle: FlattenInterpolation<Them
   color: ${({ theme }) => (isActive ? theme.white : theme.black)};
   ${customStyle && customStyle};
 `;
-export default Tag;
+export default TagLarge;

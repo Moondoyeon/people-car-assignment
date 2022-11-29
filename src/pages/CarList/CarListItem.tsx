@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import TagSmall from '../../components/UI/Tag/TagSmall';
+import { CAR_FUELTYPE, CAR_SEGMENT } from '../../constant/static';
 import { ICarBasic } from '../../types/car';
 import isWithinADay from '../../utils/isWithinADay';
 
@@ -25,7 +26,7 @@ function CarListItem({ car }: Props) {
         </MainInfo>
         <SubInfo>
           <div className="sub-info">
-            {car.attribute.segment} / {car.attribute.fuelType}
+            {CAR_SEGMENT[car.attribute.segment]} / {CAR_FUELTYPE[car.attribute.fuelType]}
           </div>
           <div className="sub-info">월 {car.amount?.toLocaleString()} 원 부터</div>
         </SubInfo>

@@ -23,9 +23,9 @@ export interface ICarBasic {
   additionalProducts: ICarAdditionalProducts[] | undefined;
 }
 
-export interface ICarInfoContext {
-  carInfo: ICarBasic[];
-  setCarInfo: React.Dispatch<React.SetStateAction<ICarBasic[]>>;
+export interface ICarsContext {
+  cars: ICarBasic[];
+  setCars: React.Dispatch<React.SetStateAction<ICarBasic[]>>;
 }
 
 export type CarSegment = 'C' | 'D' | 'E' | 'SUV';

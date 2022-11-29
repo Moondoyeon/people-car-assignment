@@ -1,20 +1,20 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { createContext, ReactNode, useContext, useState } from 'react';
-import { ICarBasic, ICarInfoContext } from '../types/car';
+import { ICarBasic, ICarsContext } from '../types/car';
 
-export const CarInfoListContext = createContext<ICarInfoContext>({
-  carInfo: [],
-  setCarInfo: () => [],
+export const CarsContext = createContext<ICarsContext>({
+  cars: [],
+  setCars: () => [],
 });
-export const useCarInfoList = () => useContext(CarInfoListContext);
+export const useCars = () => useContext(CarsContext);
 
 interface Props {
   children: ReactNode;
 }
-function CarInfoProvider({ children }: Props) {
-  const [carInfo, setCarInfo] = useState<ICarBasic[]>([]);
+function CarsProvider({ children }: Props) {
+  const [cars, setCars] = useState<ICarBasic[]>([]);
 
-  return <CarInfoListContext.Provider value={{ carInfo, setCarInfo }}>{children}</CarInfoListContext.Provider>;
+  return <CarsContext.Provider value={{ cars, setCars }}>{children}</CarsContext.Provider>;
 }
 
-export default CarInfoProvider;
+export default CarsProvider;

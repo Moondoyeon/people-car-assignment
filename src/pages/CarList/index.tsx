@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { useCarInfoList } from '../../context/CarListContext';
+import { useCars } from '../../context/CarListContext';
 import { flexBox } from '../../styles/mixin';
 
 import useGetCarList from '../../hooks/useGetCarList';
@@ -12,7 +12,7 @@ import CarListItem from './CarListItem';
 import Header from '../../components/layout/Header/Header';
 
 function CarList() {
-  const { carInfo } = useCarInfoList();
+  const { cars } = useCars();
   const { isLoading, getCarList } = useGetCarList();
   const [searchParams, setSearchParams] = useSearchParams();
   const segment = useMemo(() => getCarSegment(searchParams), [searchParams]);
@@ -28,9 +28,9 @@ function CarList() {
       <SegmentTap segment={segment} setSearchParams={setSearchParams} />
       {isLoading && <Notice>불러오는 중</Notice>}
 
-      {!isLoading && carInfo?.map((car) => <CarListItem key={car.id} car={car} />)}
+      {!isLoading && cars?.map((car) => <CarListItem key={car.id} car={car} />)}
 
-      {!isLoading && !carInfo?.length && <Notice>차량이 없습니다.</Notice>}
+      {!isLoading && !cars?.length && <Notice>차량이 없습니다.</Notice>}
     </Container>
   );
 }

@@ -6,7 +6,7 @@ type TagRawProps = {
   customStyle: FlattenInterpolation<ThemeProps<unknown>>;
   onClick?: () => void;
 };
-function Tag({ text, customStyle, onClick }: TagRawProps) {
+function TagRaw({ text, customStyle, onClick }: TagRawProps) {
   return (
     <Container customStyle={customStyle} onClick={onClick}>
       {text}
@@ -19,4 +19,4 @@ const Container = styled.div<{ customStyle: FlattenInterpolation<ThemeProps<unkn
   font-weight: 700;
   ${({ customStyle }) => customStyle};
 `;
-export default Tag;
+export default TagRaw;

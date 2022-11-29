@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
-import { useCarInfoList } from '../context/CarListContext';
+import { useCars } from '../context/CarListContext';
 import { CarFuelType, CarSegment, ICarBasic } from '../types/car';
 
 type CarTypeParams = {
@@ -15,7 +15,7 @@ type ResponseValues = {
 
 function useGetCarList() {
   const [isLoading, setIsLoading] = useState(false);
-  const { setCarInfo } = useCarInfoList();
+  const { setCars } = useCars();
   const navigate = useNavigate();
 
   const getCarList = async (params?: CarTypeParams) => {
@@ -27,7 +27,7 @@ function useGetCarList() {
     }: ResponseValues = await axiosInstance.get('/cars', { params });
 
     if (status >= 200 && status < 300) {
-      setCarInfo(payload);
+      setCars(payload);
       setIsLoading(false);
     } else {
       navigate('/error', { state: { status } });
