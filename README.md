@@ -1,9 +1,11 @@
 # 📖 B2C 차량대여 서비스 구현
 
 > 기간: 2022년 10월29일-31일, 11월27일-29일 (6일)
-> <br/> > <a href="http://people-car-assignment.s3-website.ap-northeast-2.amazonaws.com">📎링크 바로가기</a>
+> <br/> <a href="http://people-car-assignment.s3-website.ap-northeast-2.amazonaws.com">📎링크 바로가기</a>
 
 ## 🎬 미리보기
+
+![b2c-people-car](https://user-images.githubusercontent.com/102936206/204457096-8b0f1dfa-807b-476c-b68d-3599a25e12c9.gif)
 
 ## ⚡️ 스택
 
