@@ -5,7 +5,7 @@
 
 ## 🎬 미리보기
 
-![b2c-people-car](https://user-images.githubusercontent.com/102936206/204457096-8b0f1dfa-807b-476c-b68d-3599a25e12c9.gif)
+![demo-peoplecar](https://user-images.githubusercontent.com/102936206/204457923-5e794c64-2b5d-44c9-978f-91a6cb2ea2b9.gif)
 
 ## ⚡️ 스택
 
